@@ -1,9 +1,10 @@
+# serverless framework for aliyun
+
 ## Feature
-- Use the serverless framework for the Aliyun Function Compute
-  - about the serverless framework
-    - https://www.serverless.com/framework/docs/providers/aliyun/
-  - about the Aliyun Function Compute
-    - https://www.alibabacloud.com/help/product/50980.htm
+- Use the serverless framework
+  - https://www.serverless.com/framework/docs/providers/aliyun/
+- Use the Aliyun Function Compute
+  - https://www.alibabacloud.com/help/product/50980.htm
 - Get all public channels not archived of the Slack
   - https://api.slack.com/methods/conversations.list
 - Post message for these channels to #general
@@ -18,6 +19,7 @@ SDK: 2.3.1
 Components: 2.31.12
 ```
 
+# How to use
 
 ## Prepare
 - Aliyun RAM User credentials with Administrator
@@ -52,21 +54,20 @@ Components: 2.31.12
 
 ## Deploy
 ### Warning
-This code works only the Aliyun Function Compute by Time Trigger with payload
+This code works only on the Aliyun Function Compute by Time Trigger with payload
 
 ```sh
 serverless deploy
 ```
 
-## Payload and Time Trigger of the Function Compute
+## Payload and Timer Settings
 #### payload example
 ```sh
 {"token": "xoxb-abc", "channel": "#general"}
 ```
 
-#### time trigger example
+#### timer settings example
+- https://www.alibabacloud.com/help/doc-detail/68172.htm
 ```sh
 0 0 1 ? ? MON
 ```
-- about Time Trigger
-  - https://www.alibabacloud.com/help/doc-detail/68172.htm
