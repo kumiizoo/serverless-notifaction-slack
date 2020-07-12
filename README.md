@@ -21,7 +21,20 @@ Components: 2.31.12
 
 ## Prepare
 - Aliyun RAM User credentials with Administrator
-  - https://www.alibabacloud.com/help/doc-detail/122148.htm
+  - about the Aliyun RAM User
+    - https://www.alibabacloud.com/help/doc-detail/122148.htm
+  - Set the credentials bellow
+  ```sh
+  .aliyuncli/credentials
+  ```
+  - credentials example
+  ```sh
+  [default]
+  aliyun_access_key_id = LTAxxxx
+  aliyun_access_key_secret = caxxxxxx
+  aliyun_account_id = 1234xxx
+  ```
+
 - Slack app having features bellow
   - Bots
   - Incoming Webhooks
@@ -31,7 +44,7 @@ Components: 2.31.12
   - chat:write.customize
   - incoming-webhook
 - Slack Bot User OAuth Access Token
-  - example
+  - token example
   ```
   xoxb-abcdef...
   ```
@@ -45,7 +58,7 @@ This code works only the Aliyun Function Compute by Time Trigger with payload
 serverless deploy
 ```
 
-## Payload and Time Trigger
+## Payload and Time Trigger of the Function Compute
 #### payload example
 ```sh
 {"token": "xoxb-abc", "channel": "#general"}
@@ -55,4 +68,5 @@ serverless deploy
 ```sh
 0 0 1 ? ? MON
 ```
-https://www.alibabacloud.com/help/doc-detail/68172.htm
+- about Time Trigger
+  - https://www.alibabacloud.com/help/doc-detail/68172.htm
