@@ -22,7 +22,7 @@ Components: 2.31.12
 # How to use
 
 ## Prepare
-- Aliyun RAM User credentials with Administrator
+- Aliyun RAM User credentials for Administrator
   - about the Aliyun RAM User
     - https://www.alibabacloud.com/help/doc-detail/122148.htm
   - Set the credentials bellow
