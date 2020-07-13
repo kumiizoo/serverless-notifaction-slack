@@ -17,7 +17,7 @@ exports.handler = (event, context, callback) => {
       JSON.parse(data).channels.forEach(channel => {channels.push(channel)});
 
       var text = '興味のあるチャンネルに参加してみよう。\n使っていないチャンネルは削除するので Slack管理者 までご連絡ください。\n\n'
-      channels.forEach(channel => {text += '#' + channel.name + '　description: ' + channel.purpose.value + '\n';});
+      channels.forEach(channel => {text += '#' + channel.name + '　　' + channel.purpose.value + '\n';});
 
       var URL = 'https://slack.com/api/chat.postMessage';
 
